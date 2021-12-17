@@ -1,5 +1,7 @@
 $primary-color: hsl(257, 40%, 49%);
 $secundary-color: hsl(300, 69%, 71%);
+$white: #FFFFFF;
+$gray: #c0c0c0;
 $mobil-title-h1: 2.4rem;
 $mobil-paragraph: 1.6rem;
 $mobil-small: 1.3rem;
@@ -24,8 +26,140 @@ html {
 body {
     background-color: $primary-color;
     position: relative;
+    display: grid;
+    grid-template-rows: auto;
+
+    .image-background {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+.header-container {
+    width: 90%;
+    margin: auto;
+    
 
     img {
-        position: absolute;
+        width: 115px;
+        margin: {
+            block-start: 25px;
+            block-end: 70px;
+        }
+    }
+}
+
+.main-container {
+    width: 95%;
+    margin: auto;
+    z-index: 5;
+    display: grid;
+    grid: {
+        template-columns: 1fr;
+        template-rows: auto;
+        gap: 70px;
+    }
+
+    .main-container-ilustration {
+        width: 90%;
+        place-self: center;
+    }
+
+    .main-container-info {
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @mixin style-titleh1 ($size, $weight, $text-align) {
+            font: {
+                size: $size;
+                family: 'Poppins', sans-serif;
+                weight: $weight;
+            }
+            color: $white;
+            text-align: $text-align;
+        }
+        
+        @mixin style-paragraph ($size, $text-align, $block-start, $block-end, $max-width){
+            font: {
+                size: $size;
+                weight: normal;
+            }
+            color: $white;
+            line-height: 22px;
+            text-align: $text-align;
+            margin-block-start: $block-start;
+            margin-block-end: $block-end;
+            max-width: $max-width;
+        }
+        
+        @mixin style-button ($width, $height, $align, $background, $color){
+            width: $width;
+            height: $height;
+            align-self: $align;
+            background-color: $background;
+            border-radius: 20px;
+            border: none;
+            color: $color;
+            margin-block-end: 60px;
+            box-shadow: 4px 4px 6px rgba(27, 22, 42, 0.25);
+        }
+
+        h1 {
+            @include style-titleh1($mobil-title-h1, 600, center);
+        }
+
+        p {
+            @include style-paragraph($mobil-paragraph, center, 15px, 30px, 300px);
+        }
+
+        button {
+            @include style-button(200px, 40px, center, $white, $primary-color)   
+        }
+    }
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-block-end: 20px;
+
+    .footer-container-social-media {
+        display: flex;
+        justify-content: center;
+        margin-block-end: 20px;
+
+        div {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            border: 1px solid white;
+            border-radius: 50px;
+            margin-inline-end: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            svg {
+                position: absolute;
+                fill: $white;
+            }
+        }   
+    }
+
+    .attribution {
+        font-size: 11px; 
+        text-align: center;
+        color: $gray;
+
+        a {
+            color: $white;
+        }
     }
 }
