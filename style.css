@@ -88,6 +88,7 @@ body .image-background {
           margin-block-start: 15px;
   -webkit-margin-after: 30px;
           margin-block-end: 30px;
+  margin: auto;
   max-width: 300px;
 }
 
