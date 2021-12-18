@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Jeferson57/Huddle-landing-page-with-single-introductory-section.github.io)
-- Live Site URL: [Add live site URL here](https://jeferson57.github.io/Huddle-landing-page-with-single-introductory-section.github.io/)
+- Solution URL: [Repo](https://github.com/Jeferson57/Huddle-landing-page-with-single-introductory-section.github.io)
+- Live Site URL: [Page](https://jeferson57.github.io/Huddle-landing-page-with-single-introductory-section.github.io/)
 
 ## My process
 
