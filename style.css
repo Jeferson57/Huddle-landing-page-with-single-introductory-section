@@ -227,6 +227,23 @@ body picture img {
             box-shadow: 4px 4px 6px rgba(27, 22, 42, 0.25);
     font-size: 1.8rem;
   }
+  .main-container .main-container-info button:hover {
+    width: 200px;
+    height: 55px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    background-color: #e882e8;
+    border-radius: 50px;
+    border: none;
+    color: #FFFFFF;
+    -webkit-margin-after: 60px;
+            margin-block-end: 60px;
+    -webkit-box-shadow: 4px 4px 6px rgba(27, 22, 42, 0.25);
+            box-shadow: 4px 4px 6px rgba(27, 22, 42, 0.25);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
   .footer-container {
     display: -ms-grid;
     display: grid;
@@ -235,9 +252,9 @@ body picture img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
-    -webkit-margin-after: 20px;
-            margin-block-end: 20px;
+    width: 90%;
+    margin: auto;
+    margin-block: 20px;
   }
   .footer-container .footer-container-social-media {
     -ms-grid-column-align: end;
@@ -250,8 +267,17 @@ body picture img {
     grid-row-end: 2;
     -webkit-margin-after: 0px;
             margin-block-end: 0px;
-    -webkit-margin-end: 50px;
-            margin-inline-end: 50px;
+  }
+  .footer-container .footer-container-social-media div {
+    width: 42px;
+    height: 42px;
+  }
+  .footer-container .footer-container-social-media div:hover {
+    border: 1px solid #e882e8;
+    cursor: pointer;
+  }
+  .footer-container .footer-container-social-media div:hover svg {
+    fill: #e882e8;
   }
   .footer-container .attribution {
     -ms-grid-column-align: center;
