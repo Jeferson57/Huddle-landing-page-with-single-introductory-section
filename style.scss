@@ -29,10 +29,13 @@ body {
     display: grid;
     grid-template-rows: auto;
 
-    .image-background {
-        width: 100%;
-        position: absolute;
-        z-index: 1;
+    picture {
+
+        img {
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
     }
 }
 
@@ -128,6 +131,7 @@ body {
     align-content: center;
     justify-content: center;
     margin-block-end: 20px;
+    z-index: 5;
 
     .footer-container-social-media {
         display: flex;
@@ -160,6 +164,112 @@ body {
 
         a {
             color: $white;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        picture {
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .header-container {
+        img {
+            width: 185px;
+        }
+    }
+
+    .main-container {
+        width: 90%;
+        grid-template-columns: 1.3fr 1fr;
+        grid-gap: 40px;
+
+        .main-container-ilustration {
+            width: 100%;
+        }
+
+        .main-container-info {
+            justify-self: start;
+
+            @mixin style-titleh1 ($size, $weight, $text-align) {
+                font: {
+                    size: $size;
+                    family: 'Poppins', sans-serif;
+                    weight: $weight;
+                }
+                color: $white;
+                text-align: $text-align;
+            }
+
+            @mixin style-paragraph ($size, $text-align, $block-start, $block-end, $max-width){
+                font: {
+                    size: $size;
+                    weight: normal;
+                }
+                color: $white;
+                line-height: 22px;
+                text-align: $text-align;
+                margin-block-start: $block-start;
+                margin-block-end: $block-end;
+                max-width: $max-width;
+            }
+            
+            @mixin style-button ($width, $height, $align, $background, $color){
+                width: $width;
+                height: $height;
+                align-self: $align;
+                background-color: $background;
+                border-radius: 50px;
+                border: none;
+                color: $color;
+                margin-block-end: 60px;
+                box-shadow: 4px 4px 6px rgba(27, 22, 42, 0.25);
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                @include style-titleh1($desktop-title-h1, 600, start);
+            }
+
+            p {
+                @include style-paragraph($desktop-paragraph, start, 25px, 30px, 540px);
+            }
+
+            button {
+                @include style-button(200px, 55px, start, $white, $primary-color )
+            }
+        }
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        width: 100%;
+        margin-block-end: 20px;
+
+        .footer-container-social-media {
+            justify-self: end;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            margin-block-end: 0px;
+            margin-inline-end: 50px;
+        }
+
+        .attribution {
+            justify-self: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
         }
     }
 }
