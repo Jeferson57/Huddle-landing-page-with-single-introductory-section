@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot Huddle landing page.png)
+![](./images/screenshot-Huddle-landing-page.png)
 
 ### Links
 
